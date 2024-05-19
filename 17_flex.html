@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1차원 레이아웃 플렉스 박스</title>
+    <style>
+        /*flex-container
+            해당 요소를 flex container로 설정 
+            이렇게 하면 하위의 플렉스 item들을 
+            가로/세로로 편리하게 정렬할 수 있다.*/
+
+        .flex-container {
+            display: flex; /*flex 컨테이너로 설정 */
+            flex-direction: row; /*플렉스의 주축을 가로로 설정 */
+            justify-content: space-around; /* 주축을 기준으로 요소들을 정렬*/
+            align-items: center; /*교차축을 기준으로 요소들을 정렬*/
+            height: 100vh; /*웹 브라우저의 높이를 100%를 사용*/
+        }
+
+        .flex-item{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">item-1</div>
+        <div class="flex-item">item-2</div>
+        <div class="flex-item">item-3</div>
+        <div class="flex-item">item-4</div>
+    </div>
+    </html>
+</body>

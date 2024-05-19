@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 레이아웃</title>
+    <style>
+        /* 공통 CSS */
+        body{
+            font-family: '맑은 고딕', sans-serif;
+            margin: 10px;
+            padding: 10px;
+        }
+        h1, h2{
+            color: rgb(90, 88, 88);
+        }
+        /* 시맨틱 태그 구분 위한 스타일 */
+        header, nav, aside, main, footer{
+            border: 1px solid rgb(180, 178, 178);
+            box-sizing: border-box; /* 컨텐트의 너비를 보더까지 포함 */
+            padding: 10px;
+            margin: 10px;
+        }
+        /* 컨테이너 스타일 */
+        #container{
+            width: 100%;   /* 컨테이너 너비 */
+            margin: 20px auto;  /* 위아래는-20px, 수평으로 가운데 정렬 */         
+        }
+        /* 헤더 스타일 */
+
+        /* 내비게이션 스타일 */
+        nav ul{
+            display: flex; /* 가로로 배치 */
+            list-style-type: none; /* 목록 기호 제거 */
+            background-color: white; /* 배경색 지정 */
+        }
+        nav ul li{
+            margin-right: 10px; /* 오른쪽 여백 10px */
+            font-weight: bold; /* 글자 굵게 */
+        }
+        nav ul li a{
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: rgb(56, 55, 55); /* 글자색 지정 */
+        }
+        /* 사이드바 스타일 */
+        aside{
+            float: left; /* 왼쪽으로 띄워서 배치 */
+            width: 30%; /* 너비 30% */
+            margin-right: 20px; /* 오른쪽 여백 20px */
+        }
+        /* 메인 컨텐츠 스타일 */
+        main{
+            float: left; /* 왼쪽으로 띄워서 배치 */
+            width: 65%; /* 너비 65% */
+        }
+        /* 푸터 스타일 */
+        footer{
+            clear: both; /* float 속성 해제 */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>2단 레이아웃</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside>
+            <h2>사이드바</h2>
+            <p>사이드바 내용이 여기에 들어갑니다.</p>
+        </aside>
+
+        <main>
+            <h2>메인 컨텐츠</h2>
+            <p>메인 컨텐츠 내용이 여기에 들어갑니다.</p>
+        </main>
+
+        <footer>
+            <h2>푸터</h2>
+            <p>푸터 내용이 여기에 들어갑니다.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

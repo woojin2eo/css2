@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template layout</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .grid-container{
+            display: grid; /* grid container 생성 */
+            grid-template-areas: 
+                "header header header"
+                "sidebar content content"
+                "footer footer footer";
+        }
+        #header{
+            /* grid-area 속성을 이용해서 grid-item의 위치를 지정,
+               여기서 grid-area: header의 header는 grid-template-areas에서 
+               정의한 이름으로 html 태그 중에서 id속성이 header인 p 태그인
+               그리드 컨테이너의 자식이 grid-template-areas에서 지정한
+               header 부분에 위치하게 된다. */
+            grid-area: header;  
+        }
+        #sidebar{
+            grid-area: sidebar;
+        }
+        #content{
+            grid-area: content;
+        }
+        #footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <p id="header" class="grid-item">header</p>
+        <p id="sidebar" class="grid-item">sidebar</p>
+        <p id="content" class="grid-item">content</p>
+        <p id="footer" class="grid-item">footer</p>
+    </div>
+</body>
+</html>

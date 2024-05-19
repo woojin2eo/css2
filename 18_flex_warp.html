@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap</title>
+    <style>
+        /* 플렉스 컨테이너 */
+        .flex-container{
+            width: 300px;   /* 플렉스 컨테이너의 너비 300*/
+            height: 300px;  /* 플렉스 컨테이너의 높이 300*/
+            display: flex;  /* flex 컨테이너로 설정 */
+            /* 자식들이 부모 넓이를 초과할 때 어떻게 할지 nowrap이 기본값이고 
+               한줄로 쭉 나열(부모 넓이 초과해도), 반면에 wrap은 부모의 넓이를
+               초과하면 다음줄로 내려간다. */
+            flex-wrap: nowrap; 
+            border-color: gray;
+            border: 1px solid red
+        }
+        .flex-item{
+            color: white;
+            background-color: rgb(240, 5, 240);
+        }
+        .flex-item:nth-child(2n){
+            background-color: rgb(2, 150, 155);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">item-1</div>
+        <div class="flex-item">item-2</div>
+        <div class="flex-item">item-3</div>
+        <div class="flex-item">item-4</div>
+        <div class="flex-item">item-5</div>
+        <div class="flex-item">item-6</div>
+        <div class="flex-item">item-7</div>
+        <div class="flex-item">item-8</div>
+        <div class="flex-item">item-9</div>
+        <div class="flex-item">item-10</div>
+        <div class="flex-item">item-11</div>
+    </div>
+</body>
+</html>
